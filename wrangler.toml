@@ -1,0 +1,5 @@
+compatibility_date = "2023-09-06"
+
+# kv_namespaces = [
+#     { binding = "testkv", id="563942c43adf46569f663893fb01fe2b", preview_id = "563942c43adf46569f663893fb01fe2b" }
+# ]

@@ -1,12 +1,13 @@
-import App from "./Root";
-import { renderToString } from "react-dom/server";
+import Root from "./Root";
 import { StaticRouter } from "react-router-dom/server";
 
-export const render = (_req: Request) => {
-  const url = _req.url!.replace(/index\.html$/, '');
-  return renderToString(<>
-    <StaticRouter location={url}>
-      <App />
-    </StaticRouter>
-  </>);
+export const render = (url: string, env: any) => {
+	console.log("render", url, env);
+	return (
+		<>
+			<StaticRouter location={url}>
+				<Root />
+			</StaticRouter>
+		</>
+	);
 };
